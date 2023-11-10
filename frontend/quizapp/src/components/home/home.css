@@ -1,0 +1,291 @@
+.homepage{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+.dropdownTrigger img{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    height: 3.6rem;
+    width: 3.6rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.dropdownMenu{
+    position: absolute;
+    top: 5.2rem;
+    right: 2rem;
+    width: 14rem;
+    height: 20rem;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    background-color: #E6E6FA;
+}
+
+.dropdownMenu.active {
+    opacity: 1;
+    visibility: active;
+    transform: translateY(0);
+    transition: 0.5s ease;
+}
+
+.dropdownMenu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5);
+    transition: 0.5s ease;
+}
+
+/* .dropdownMenu ::before{
+    color: blue;
+    content:'';
+    position: absolute;
+    top: 9rem;
+    right: 110rem;
+    height: 40rem;
+    width: 20rem;
+    background: var(--secondary-bg);
+    transform: rotate(45deg);
+} */
+
+.dropdownMenu h3{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dropdownMenu ul li{
+    list-style: none;
+}
+
+.dropdownMenu ul li:hover span{
+    color: red;
+    cursor: pointer;
+}
+
+.dropdownItem{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+.dropdownItem span{
+    font-size: 1rem;
+    transition: color 0.5s ease;
+}
+
+.dropdownItem img{
+    cursor: pointer;
+    height: 1.7rem;
+    width: 1.7rem;
+    margin-right: 1rem;
+}
+
+
+.majorHeading{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 5rem;
+}
+
+.sections{
+    border-radius: 4rem;
+    height: 57rem;
+    width: 75%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    
+}
+
+
+.sections h1{
+   font-size: 3rem;
+}
+
+.quizSection{
+    height: 50rem;
+    width: 48%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    text-align: center;
+    /* border: 2px solid green; */
+    border-radius: 3rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg,rgb(203, 11, 232), #aa2bd0 0%,46%, #568ad7 100%);
+    box-shadow: rgba(180, 178, 178, 0.17) 0px -23px 25px 0px inset, rgba(107, 107, 107, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(0.95);
+    
+}
+
+.quizSection:hover {
+    transform: scale(0.99);
+  }
+
+.quizSection img{
+    height: 25rem;
+    width: 25rem;
+}
+
+.examSection{
+    height: 50rem;
+    width: 48%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    text-align: center;
+    /* border: 2px solid green; */
+    border-radius: 3rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #7aa9d9 0%, rgb(32, 239, 222) 46%, #7373f4 100%);
+    box-shadow: rgba(180, 178, 178, 0.17) 0px -23px 25px 0px inset, rgba(107, 107, 107, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(0.95);
+}
+
+.examSection:hover {
+    transform: scale(0.99);
+  }
+
+.examSection img{
+    height: 21rem;
+    width: 25rem;
+}
+
+
+
+.quizCard {
+    margin: auto;
+    background-color: transparent;
+    width: 80%;
+    height: 4rem;
+    perspective: 1000px;
+}
+
+
+.examCard {
+    margin: auto;
+    margin-top: 7rem;
+    background-color: transparent;
+    width: 80%;
+    height: 4rem;
+    perspective: 1000px;
+}
+  
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+  
+.innerCreateCard {
+    margin-top: 0.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+  
+.innerCreateCard:hover {
+    transform: rotateY(180deg);
+}
+  
+  .innerUpdateCard {
+    margin-top: 0.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+  
+.innerUpdateCard:hover {
+    transform: rotateY(180deg);
+}
+
+.innerGetCard {
+    margin-top: 0.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+  
+.innerGetCard:hover {
+    transform: rotateY(180deg);
+}
+
+  .innerPublishCard {
+    margin-top: 0.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+  
+.innerPublishCard:hover {
+    transform: rotateY(180deg);
+}
+
+
+  
+.frontSide,
+.frontSide::before {
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+  
+.backSide,
+.backSide::before {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+  
+.backSide {
+    transform: rotateY(180deg);
+}
+  
+.frontSide,
+.backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+}
+  
+@keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+}
