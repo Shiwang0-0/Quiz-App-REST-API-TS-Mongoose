@@ -119,7 +119,7 @@
     background-image: linear-gradient(43deg,rgb(203, 11, 232), #aa2bd0 0%,46%, #568ad7 100%);
     box-shadow: rgba(180, 178, 178, 0.17) 0px -23px 25px 0px inset, rgba(107, 107, 107, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transform: scale(0.95);
-    
+    cursor: pointer;
 }
 
 .quizSection:hover {
@@ -144,6 +144,7 @@
     background-image: linear-gradient(43deg, #7aa9d9 0%, rgb(32, 239, 222) 46%, #7373f4 100%);
     box-shadow: rgba(180, 178, 178, 0.17) 0px -23px 25px 0px inset, rgba(107, 107, 107, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transform: scale(0.95);
+    cursor: pointer;
 }
 
 .examSection:hover {
@@ -163,6 +164,7 @@
     width: 80%;
     height: 4rem;
     perspective: 1000px;
+    
 }
 
 
@@ -173,6 +175,7 @@
     width: 80%;
     height: 4rem;
     perspective: 1000px;
+    /* cursor: pointer; */
 }
   
 .title {
@@ -188,14 +191,9 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
   
-.innerCreateCard:hover {
-    transform: rotateY(180deg);
-}
   
   .innerUpdateCard {
     margin-top: 0.5rem;
@@ -203,13 +201,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-  
-.innerUpdateCard:hover {
-    transform: rotateY(180deg);
+    /* cursor: pointer; */
 }
 
 .innerGetCard {
@@ -218,13 +210,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-  
-.innerGetCard:hover {
-    transform: rotateY(180deg);
+    /* cursor: pointer; */
 }
 
   .innerPublishCard {
@@ -233,33 +219,14 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
   
-.innerPublishCard:hover {
-    transform: rotateY(180deg);
-}
-
-
-  
-.frontSide,
-.frontSide::before {
+.frontSide {
     background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
 }
   
-.backSide,
-.backSide::before {
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-  
-.backSide {
-    transform: rotateY(180deg);
-}
-  
-.frontSide,
-.backSide {
+.frontSide{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -267,25 +234,13 @@
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     color: white;
     box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
     font-weight: 700;
 }
-  
-@keyframes animate {
-    0% {
-      opacity: 0.3;
-    }
-  
-    80% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0.3;
-    }
+
+.titleDescription{
+    font-size: 1.4rem;
 }

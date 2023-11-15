@@ -52,43 +52,32 @@ const Home = () => {
           <img src={quizimg} alt="quiz" />
           <div class="quizCard">
             <div class="innerCreateCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Create quiz</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">The user can create quiz</p>
-              </div>
+              <p class="titleDescription">The user can create quiz</p>
             </div>
-
             <div class="innerUpdateCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Update quiz</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">The user can update quiz</p>
-              </div>
+              <p class="titleDescription">The user can update quiz</p>
             </div>
-
             <div class="innerGetCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Get quiz</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">
-                  The user can get all the quizes quiz
-                </p>
-              </div>
+              <p class="titleDescription">
+                The user can get all the quizes quiz
+              </p>
             </div>
-
             <div class="innerPublishCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Publish Quiz</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">
-                  The user can publish the quiz so that others can attempt it
-                </p>
-              </div>
+              <p class="titleDescription">
+                The user can publish the quiz so that others can attempt it
+              </p>
             </div>
           </div>
         </div>
@@ -97,32 +86,23 @@ const Home = () => {
           <img src={examimg} alt="exam" />
           <div class="examCard">
             <div class="innerCreateCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Start Exam</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">The user can start the exam</p>
-              </div>
+              <p class="titleDescription">The user can start the exam</p>
             </div>
-
             <div class="innerUpdateCard">
-              <div class="frontSide">
+              <div class="cardDescription">
                 <p class="title">Submit Exam</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">The user can submit the exam</p>
-              </div>
+              <p class="titleDescription">The user can submit the exam</p>
             </div>
-
             <div class="innerUpdateCard">
-              <div class="frontSide">   
+              <div class="cardDescription">
                 <p class="title">Exam Reports</p>
               </div>
-              <div class="backSide">
-                <p class="titleDescription">The user can get the exam report </p>
-              </div>
+              <p class="titleDescription">The user can get the exam report </p>
             </div>
-
           </div>
         </div>
       </div>
