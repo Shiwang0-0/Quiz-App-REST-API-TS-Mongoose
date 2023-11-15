@@ -1,0 +1,55 @@
+.modalWrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(206, 202, 202);
+}
+
+.modalContainer{
+    height: 20rem;
+    width: 30rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalContainer p{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.modalContainer >input{
+    margin-top: 3rem;
+    font-size: 2rem;
+    width: 37%;
+    letter-spacing: 0.7rem;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(0, 0, 0);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.modalContainer button{
+    margin-top: 3rem;
+    font-size: 2rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+}
+
+button:hover {
+    color: #fff;
+    background-color: rgb(11, 11, 137);
+    box-shadow: rgb(46, 46, 150);
+    transform: translateY(-2px);
+   }
+   
