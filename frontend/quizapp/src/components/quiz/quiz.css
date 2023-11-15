@@ -1,0 +1,63 @@
+.sectionButtons {
+    height: 38rem;
+    width: 90%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4.5rem;
+}
+
+.card{
+    height: 33rem;
+    width: 23%;
+    background-color: rgb(143, 125, 246);
+    margin: 1rem;
+    /* border: 2px solid red; */
+    border-radius: 3rem;
+}
+
+.buttonDescription
+{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    /* border: 2px solid red; */
+    width: 70%;
+    margin-left: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDescription li
+{
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    color: #060149;
+}
+
+.sectionButtons button {
+    font-size: 1.3rem;
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+    height: 4rem;
+    width: 9rem;
+    border-radius: 45px;
+    color: white;
+    background: linear-gradient(145deg, #5c4bee,#6e62ce, rgb(65, 61, 92));
+    
+}
+
+.sectionButtons button:hover {
+    background: linear-gradient(145deg,rgb(65, 61, 92),#6e62ce,#5c4bee  );
+    box-shadow: 2px 4px 3px #6e6b88, 6px 6px 6px #9e99c4;
+    cursor: pointer;
+}
+
+.sectionButtons img{
+    height: 17rem;
+    width: 17rem;
+    margin-top: 0.5rem;
+    margin-left: 1.2rem;
+    border-radius: 3rem;
+}
+
