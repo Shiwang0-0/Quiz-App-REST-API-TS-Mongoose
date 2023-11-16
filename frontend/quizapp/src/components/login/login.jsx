@@ -1,6 +1,7 @@
 import React from "react";
 import "./login.css";
 import loginimg from '../../resources/loginImage.png'
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -13,13 +14,13 @@ const Login = () => {
           <input type="password" placeholder="Enter Your Password"></input>
         </div>
 
-        <button className="loginBtn">Login</button>
+        <button className="loginBtn"><Link to="/home" style={{ textDecoration: 'none',color:'inherit' }}> Login </Link></button>
         <div className="toRegister">
-          First time? click <span className="registerBtn">here</span> to create
+          First time? click <span className="toRegisterBtn"><Link to="/register" style={{ textDecoration: 'none',color:'inherit' }}>here</Link></span> to create
           new account
         </div>
         <div className="toActivate">
-          Account Deactivated? click <span className="activateBtn">here</span>{" "}
+          Account Deactivated? click <span className="activateBtn"><Link to="/register" style={{ textDecoration: 'none',color:'inherit' }}>here</Link></span>{" "}
           to activate your account
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
 import userimg from "../../resources/userimg.png";
 import settingsimg from "../../resources/settings.png";
 import logoutimg from "../../resources/log-out.png";
@@ -48,6 +49,7 @@ const Home = () => {
       <div className="majorHeading">What's on your mind ?</div>
       <div className="sections">
         <div className="quizSection">
+        <Link to="/quiz" style={{ textDecoration: 'none',color: 'inherit' }}>
           <h1>Quiz Section</h1>
           <img src={quizimg} alt="quiz" />
           <div class="quizCard">
@@ -80,8 +82,10 @@ const Home = () => {
               </p>
             </div>
           </div>
+          </Link>
         </div>
         <div className="examSection">
+        <Link to="/exam" style={{ textDecoration: 'none',color:'inherit' }}>
           <h1>Exam Section</h1>
           <img src={examimg} alt="exam" />
           <div class="examCard">
@@ -104,6 +108,7 @@ const Home = () => {
               <p class="titleDescription">The user can get the exam report </p>
             </div>
           </div>
+          </Link>
         </div>
       </div>
     </div>

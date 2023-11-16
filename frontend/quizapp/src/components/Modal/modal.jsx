@@ -1,4 +1,5 @@
 import  "./modal.css"
+import { Link } from "react-router-dom";
 
 const OtpModal = ({closeModal}) => {
     return (
@@ -7,7 +8,7 @@ const OtpModal = ({closeModal}) => {
         <div className="modalContainer">
             <p>Enter Otp recieved on your mail</p>
             <input></input>
-            <button onClick={closeModal} >Done</button>
+            <button onClick={closeModal} ><Link to="/home" style={{ textDecoration: 'none',color:'inherit' }}> Done </Link></button>
         </div>
       </>
     );
