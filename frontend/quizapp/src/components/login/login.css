@@ -16,7 +16,7 @@
 .loginPage img{
     position: absolute;
     top: -1rem;
-    left: 5rem;
+    left: 7rem;
     height: 44rem;
     width: 44rem;
 }
@@ -44,7 +44,7 @@
     width: 70%;
     size: 2rem;
     border-radius: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgb(0, 71, 119);
     cursor: pointer;
 }
@@ -65,12 +65,14 @@
     text-align: center;
 }
 
-.registerBtn{
-    color: rgb(66, 66, 224);
+.toRegisterBtn{
+    color: rgb(32, 72, 204);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .activateBtn{
-    color: rgb(66, 66, 224);
+    color: rgb(32, 72, 204);
     cursor: pointer;
+    text-decoration: none;
 }

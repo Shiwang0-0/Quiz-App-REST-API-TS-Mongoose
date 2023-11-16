@@ -5,15 +5,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 4.5rem;
+    /* margin-left: 4.5rem; */
 }
 
-.card{
+.cardQuiz{
     height: 33rem;
-    width: 23%;
+    width: 50%;
     background-color: rgb(143, 125, 246);
     margin: 1rem;
     /* border: 2px solid red; */
+    border-radius: 3rem;
+}
+
+.cardQuiz img{
+    height: 17rem;
+    width: 17rem;
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
     border-radius: 3rem;
 }
 
@@ -35,7 +43,7 @@
     color: #060149;
 }
 
-.sectionButtons button {
+.cardQuiz button {
     font-size: 1.3rem;
     margin-left: 6rem;
     margin-top: 0.5rem;
@@ -53,11 +61,5 @@
     cursor: pointer;
 }
 
-.sectionButtons img{
-    height: 17rem;
-    width: 17rem;
-    margin-top: 0.5rem;
-    margin-left: 1.2rem;
-    border-radius: 3rem;
-}
+
 
