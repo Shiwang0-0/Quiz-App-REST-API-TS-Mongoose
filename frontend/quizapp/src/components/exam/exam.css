@@ -1,0 +1,64 @@
+.sectionButtonsExam {
+    height: 38rem;
+    width: 90%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 4.5rem; */
+}
+
+.cardExam{
+    height: 33rem;
+    width: 50%;
+    background-color: rgb(65, 234, 186);
+    margin: 1rem;
+    /* border: 2px solid red; */
+    border-radius: 3rem;
+}
+
+.cardExam img{
+    height: 22rem;
+    width: 22rem;
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 3rem;
+}
+
+.buttonDescription
+{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    /* border: 2px solid red; */
+    width: 70%;
+    margin-left: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDescription li
+{
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    color: #060149;
+}
+
+.cardExam button {
+    font-size: 1.3rem;
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+    height: 4rem;
+    width: 9rem;
+    border-radius: 45px;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(43deg, #7ac0d9 , rgb(11, 218, 200) , #73f49c );
+}
+
+.sectionButtonsExam button:hover {
+    background: linear-gradient(145deg, #73f49c,rgb(11, 218, 200),#7ac0d9  );
+    box-shadow: 2px 4px 3px #6e6b88, 6px 6px 6px #9e99c4;
+    cursor: pointer;
+}
+
+
+
