@@ -40,7 +40,7 @@
 }
 
 .registerBtn{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     height: 2.4rem;
     width: 70%;
     size: 2rem;
@@ -62,5 +62,16 @@
 
 .toLoginBtn{
     color: rgb(32, 72, 204);
+    cursor: pointer;
+}
+
+.getOTPBtn{ 
+    margin-top: 1.6rem;
+    height: 2.4rem;
+    width: 70%;
+    size: 2rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: rgb(0, 71, 119);
     cursor: pointer;
 }
