@@ -27,10 +27,11 @@
 }
 
 .modalContainer >input{
+    text-align: center;
     margin-top: 3rem;
-    font-size: 2rem;
-    width: 37%;
-    letter-spacing: 0.7rem;
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 70%;
     color: transparent;
     text-shadow: 0 0 0 rgb(0, 0, 0);
 }
