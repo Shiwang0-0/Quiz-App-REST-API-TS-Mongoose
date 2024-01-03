@@ -52,32 +52,32 @@ const Home = () => {
         <Link to="/quiz" style={{ textDecoration: 'none',color: 'inherit' }}>
           <h1>Quiz Section</h1>
           <img src={quizimg} alt="quiz" />
-          <div class="quizCard">
-            <div class="innerCreateCard">
-              <div class="cardDescription">
-                <p class="title">Create quiz</p>
+          <div className="quizCard">
+            <div className="innerCreateCard">
+              <div className="cardDescription">
+                <p className="title">Create quiz</p>
               </div>
-              <p class="titleDescription">The user can create quiz</p>
+              <p className="titleDescription">The user can create quiz</p>
             </div>
-            <div class="innerUpdateCard">
-              <div class="cardDescription">
-                <p class="title">Update quiz</p>
+            <div className="innerUpdateCard">
+              <div className="cardDescription">
+                <p className="title">Update quiz</p>
               </div>
-              <p class="titleDescription">The user can update quiz</p>
+              <p className="titleDescription">The user can update quiz</p>
             </div>
-            <div class="innerGetCard">
-              <div class="cardDescription">
-                <p class="title">Get quiz</p>
+            <div className="innerGetCard">
+              <div className="cardDescription">
+                <p className="title">Get quiz</p>
               </div>
-              <p class="titleDescription">
+              <p className="titleDescription">
                 The user can get all the quizes quiz
               </p>
             </div>
-            <div class="innerPublishCard">
-              <div class="cardDescription">
-                <p class="title">Publish Quiz</p>
+            <div className="innerPublishCard">
+              <div className="cardDescription">
+                <p className="title">Publish Quiz</p>
               </div>
-              <p class="titleDescription">
+              <p className="titleDescription">
                 The user can publish the quiz so that others can attempt it
               </p>
             </div>
@@ -88,24 +88,24 @@ const Home = () => {
         <Link to="/exam" style={{ textDecoration: 'none',color:'inherit' }}>
           <h1>Exam Section</h1>
           <img src={examimg} alt="exam" />
-          <div class="examCard">
-            <div class="innerCreateCard">
-              <div class="cardDescription">
-                <p class="title">Start Exam</p>
+          <div className="examCard">
+            <div className="innerCreateCard">
+              <div className="cardDescription">
+                <p className="title">Start Exam</p>
               </div>
-              <p class="titleDescription">The user can start the exam</p>
+              <p className="titleDescription">The user can start the exam</p>
             </div>
-            <div class="innerUpdateCard">
-              <div class="cardDescription">
-                <p class="title">Submit Exam</p>
+            <div className="innerUpdateCard">
+              <div className="cardDescription">
+                <p className="title">Submit Exam</p>
               </div>
-              <p class="titleDescription">The user can submit the exam</p>
+              <p className="titleDescription">The user can submit the exam</p>
             </div>
-            <div class="innerUpdateCard">
-              <div class="cardDescription">
-                <p class="title">Exam Reports</p>
+            <div className="innerUpdateCard">
+              <div className="cardDescription">
+                <p className="title">Exam Reports</p>
               </div>
-              <p class="titleDescription">The user can get the exam report </p>
+              <p className="titleDescription">The user can get the exam report </p>
             </div>
           </div>
           </Link>
