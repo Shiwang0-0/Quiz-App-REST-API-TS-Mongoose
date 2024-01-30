@@ -1,19 +1,12 @@
-import React, { useState } from "react";
 import "./register.css";
+import React, { useState } from "react";
 import registerimg from "../../resources/registerimg.png";
-// import OtpModal from "../Modal/modal";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import Error from "../error/validationError/error";
 import { getResponseError } from "../error/validationError/error";
+
 const Register = () => {
   const [error, setError] = useState("");
-  // let [showOtpModal, setShowOtpModal] = useState(false);
-
-  // const closeModal = () => setShowOtpModal(false);
 
   const [credentials, setCredentials] = useState({
     name: "",
@@ -23,26 +16,6 @@ const Register = () => {
   });
 
   const navigate = useNavigate();
-
-
-
-
-  // const handleOTP = async (e) => {
-  //   e.preventDefault();
-  //   const response = await fetch("http://localhost:3002/auth/send-otp", {
-  //     method: "POST",
-  //     body: JSON.stringify(form),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-  //   const data = await response.json();
-  //   console.log(data);
-  //   // console.log(response);
-  //   // console.log(form);
-  // };
-
-  // const navigate = useNavigate();
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,12 +30,6 @@ const Register = () => {
     });
     const json=await response.json()
     console.log(json);
-      // if(!response)
-      // {
-      //   console.log("no res");
-      // }
-      // const data = await response.text(); 
-      // console.log(data)
       console.log(json.status)
       if(json.status==='success')
       {
@@ -87,18 +54,15 @@ const Register = () => {
   };
 
   const handleForm = (e) => {
-    // console.log(e.target.value,e.target.name);
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value,
     });
-    console.log(credentials);
   };
 
   
   return (
     <div className="registerPage">
-      {/* <p>{JSON.stringify(form)}</p> */}
       <img src={registerimg} alt="registerimage" />
       <div className="register">
         <h1 id="heading">Register Your Account</h1>
@@ -140,31 +104,9 @@ const Register = () => {
               required
             ></input>
             <Error message={error?.confirmPassword}></Error>
-            {/* <input
-              type="number"
-              placeholder="Enter otp"
-              name="otp"
-              onChange={handleForm}
-              value={setForm.otp}
-              required
-            ></input> */}
-            {/* <Error message={error?.otp}></Error> */}
           </div>
-          <input type="submit" value="Submit" />
-          {/* <button className="registerBtn"> */}
-        {/* <Link  to="/otpmodal" style={{ textDecoration: "none", color: "inherit" }}>
-              Register
-        </Link> */}
-        {/* </button> */}
-          
+          <input type="submit" value="Submit" /> 
         </form>
-        {/* <button className="registerBtn" onClick={handleSubmit}> */}
-        
-        {/* <button className="getOTPBtn" onClick={() => {setShowOtpModal(true)}}>
-          Get OTP
-        </button> */}
-
-        {/* {showOtpModal && <OtpModal closeModal={closeModal} />} */}
 
         <div className="toRegister">
           Already a user ? click{" "}

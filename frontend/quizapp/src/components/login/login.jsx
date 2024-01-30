@@ -1,24 +1,41 @@
 import React from "react";
 import "./login.css";
 import loginimg from '../../resources/loginImage.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import getResponseError from "../error/validationError/error";
 const Login = () => {
 
   const [credentials, setCredentials]=useState({email: "",password: ""});
-
+  const navigate=useNavigate();
   const handleSubmit= async (e)=>{
-    e.preventDefault();
-    fetch("http://localhost:3002/auth/login",{
+    try{
+      e.preventDefault();
+    const response=await fetch("http://localhost:3002/auth/login",{  
       method:'POST',
       headers:{
         'Content-Type':'application/json'
       },
       body: JSON.stringify({email: credentials.email,password: credentials.password})
     });
-    const json= await Response.json();
-    console.log(json);
+    const json=await response.json()
+    console.log(json)
+    console.log(json.status)
+    if(json.status==='success')
+        {
+            localStorage.setItem('token',json.authToken)
+            navigate("/home")
+        }
+        else{
+          console.log("not validated")
+        }
+    }
+    catch(error)
+    {
+      getResponseError(error)
+    }
+    
+    
   }
 
 const onChange=(e)=>{

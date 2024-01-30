@@ -1,29 +1,22 @@
 import  "./modal.css"
+
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { getResponseError } from "../error/validationError/error";
 import { Error } from "../error/validationError/error";
-// import { useEffect } from "react";
 
 
 const OtpModal = ({closeModal}) => {
   
   const navigate = useNavigate();
   const [error, setError] = useState("");
-  // const [token, setToken] = useState(null);
-  const [Otp, setOtp] = useState({otp: ""});
-
-  
-  // useEffect(() => {
-      
-  //     setToken(retrievedToken);
-  //   });
+  const [otpVal, setOtp] = useState({otp: ""});
 
   const SendOTP=async (e)=>{
     const retrievedToken = localStorage.getItem('token');
     e.preventDefault();
     try{
-      const {otp}=Otp;
+      const {otp}=otpVal;
       console.log(`this is toke ${retrievedToken}`);
     if(!retrievedToken)
     {
@@ -33,25 +26,22 @@ const OtpModal = ({closeModal}) => {
      
       const response = await fetch(`http://localhost:3002/auth/verify-registration-otp/${retrievedToken}`, {
         method: "POST",
-        body: JSON.stringify({ Otp:otp }),
+        body: JSON.stringify({otp}),
         headers: {
           'Content-Type':'application/json',
-          // 'Authorization': `Bearer ${token}`
         },
       })
 
-      if (response.status!=="success") {
-        console.log("invalid credentials")
-      }
-      // const data = await response.text();
-      // console.log(data)
       const json=await response.json()
       console.log(json);
-        if(json.status==="success")
+      if(json.status==="success")
         {
-          // localStorage.setItem('token',json.authtoken);
           navigate("/home");
         }
+      else{
+        console.log("invalid credentials")
+      } 
+      
   }
   catch (error) {
     if (error.response && error.response.status === 422) {
@@ -66,15 +56,13 @@ const OtpModal = ({closeModal}) => {
 }
   }
 
-
   const handleOtp = (e) => {
-    // console.log(e.target.value,e.target.name);
     setOtp({
-      ...Otp,
+      ...otpVal,
       [e.target.name]: e.target.value,
       
     });
-    console.log(Otp)
+    console.log(otpVal)
   };
     return (
       <>
@@ -87,7 +75,7 @@ const OtpModal = ({closeModal}) => {
               placeholder="Enter Your Email"
               name="otp"
               onChange={handleOtp}
-              value={Otp.otp}
+              value={otpVal.otp}
               required>
             </input>
             <button onClick={SendOTP} >Done </button>
