@@ -1,50 +1,99 @@
 import  "./modal.css"
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { getResponseError } from "../error/validationError/error";
+import { Error } from "../error/validationError/error";
+// import { useEffect } from "react";
+
 
 const OtpModal = ({closeModal}) => {
+  
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  // const [token, setToken] = useState(null);
+  const [Otp, setOtp] = useState({otp: ""});
 
-  const sendOTP=async (e)=>{
+  
+  // useEffect(() => {
+      
+  //     setToken(retrievedToken);
+  //   });
+
+  const SendOTP=async (e)=>{
+    const retrievedToken = localStorage.getItem('token');
     e.preventDefault();
-    const response = await fetch('http://localhost:3002/auth/send-otp', {
-      method: "POST",
-      body: JSON.stringify(form),
-      headers: {
-        'Content-Type':'application/json'
-      },
-    })
-    const data = await response.text();
-    console.log(data)
-    closeModal();
+    try{
+      const {otp}=Otp;
+      console.log(`this is toke ${retrievedToken}`);
+    if(!retrievedToken)
+    {
+      console.log("token not recieved");
+      return;
+    }
+     
+      const response = await fetch(`http://localhost:3002/auth/verify-registration-otp/${retrievedToken}`, {
+        method: "POST",
+        body: JSON.stringify({ Otp:otp }),
+        headers: {
+          'Content-Type':'application/json',
+          // 'Authorization': `Bearer ${token}`
+        },
+      })
+
+      if (response.status!=="success") {
+        console.log("invalid credentials")
+      }
+      // const data = await response.text();
+      // console.log(data)
+      const json=await response.json()
+      console.log(json);
+        if(json.status==="success")
+        {
+          // localStorage.setItem('token',json.authtoken);
+          navigate("/home");
+        }
+  }
+  catch (error) {
+    if (error.response && error.response.status === 422) {
+        const errorData = await error.response.json();
+        console.log("Error Data:", errorData);
+        const parsedError = getResponseError(errorData);
+        setError(parsedError);
+    } else {
+        console.error("Network Error:", error);
+        setError("Something went wrong. Please try again later.");
+    }
+}
   }
 
-  const [form, setForm] = useState({
-    email: ""
-  });
-  const handleForm = (e) => {
-    console.log(e.target.value,e.target.name);
-    setForm({
-      ...form,
+
+  const handleOtp = (e) => {
+    // console.log(e.target.value,e.target.name);
+    setOtp({
+      ...Otp,
       [e.target.name]: e.target.value,
+      
     });
+    console.log(Otp)
   };
     return (
       <>
       <div className="modalWrapper" onClick={closeModal}></div>
         <div className="modalContainer">
-            <p>Enter the email to get the OTP</p>
+            <p>Enter OTP</p>
             <input 
             
-              type="email"
+              type="number"
               placeholder="Enter Your Email"
-              name="email"
-              onChange={handleForm}
-              value={setForm.email}
+              name="otp"
+              onChange={handleOtp}
+              value={Otp.otp}
               required>
             </input>
-            <button onClick={sendOTP} >Done </button>
-
+            <button onClick={SendOTP} >Done </button>
+          <Error message={error?.otp}></Error>
         </div>
       </>
     );
   };
-export default OtpModal;
+export default OtpModal;  
