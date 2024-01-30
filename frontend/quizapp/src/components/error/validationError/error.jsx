@@ -6,8 +6,9 @@ export const getResponseError=(error)=>{
     {
         return null;
     }
-    if(error.response)
+    if(error && error.response)
     {
+        console.log("Error Response:", error.response);
         if(error.response.status===422 && error.response.data)
         {
            const responseError=error.response.data;
@@ -31,6 +32,6 @@ export const Error=(error)=>{
     return(
         <div className="errorMsg">{error.message}</div>
     );
-}
+}  
 
 export default getResponseError
